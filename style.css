@@ -1,0 +1,93 @@
+body { 
+
+background: #f3f2f3; 
+
+color: #000000; 
+
+font-family: Trebuchet MS, Arial, Times New Roman; 
+
+font-size: 12px; 
+
+} 
+
+ 
+
+#wrapper { 
+
+background: #FFFFFF; 
+
+margin: 60px auto; 
+
+width: 900px; 
+
+height: 1024px; 
+
+} 
+
+ 
+
+#header { 
+
+background: #00ffff; 
+
+height: 200px; 
+
+width: 900px; 
+
+} 
+
+ 
+
+#navigation { 
+
+background: #b0e0e6; 
+
+width: 900px; 
+
+height: 20px; 
+
+} 
+
+ 
+
+#menu { 
+
+background: #ffcc99 ; 
+
+float: left; 
+
+width: 200px; 
+
+height: 624px; 
+
+} 
+
+ 
+
+#content { 
+
+background: #00ccff; 
+
+width: 900px; 
+
+height: 624px; 
+
+} 
+
+ 
+
+#footer { 
+
+background: #4166f5; 
+
+height: 180px; 
+
+width: 900px; 
+
+} 
+
+ 
+
+ 
+
+ 
