@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Manchester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" width="200" height="200">
+        <h1>PC Manchester</h1>
+        <p class="slogan">Explore computer system architecture</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Topics to Explore</a>
+                <div class="dropdown-content">
+                    <a href="internal_system.html">Internal System</a>
+                    <a href="fetch_execute_loop.html">Understanding the Fetch-Execute Loop</a>
+                    <a href="cache_virtual_memory.html">Role of Cache and Virtual Memory</a>
+                    <a href="backing_storage.html">Backing Storage</a>
+                    <a href="operating_system.html">Operating System</a>
+                    <a href="von_neumann_harvard.html">Von Neumann and Harvard Architecture</a>
+                    <a href="input_output_devices.html">Input and Output Devices</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Please fill out the form below to get in touch with us.</p>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://facebook.com"><img src="images/facebook.jpeg" alt="Facebook" class="social-icon"></a>
+        <a href="https://instagram.com"><img src="images/instagram.jpeg" alt="Instagram" class="social-icon"></a>
+        <p>© Muhammad Awais Sajid</p>
+        <a href="feedback.html">Feedback</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                if (validateForm()) {
+                    // Form is valid, you can submit it here
+                    console.log('Form submitted successfully');
+                    // Add your submission logic here, like sending data to a server
+                }
+            });
+
+            function validateForm() {
+                let isValid = true;
+
+                // Resetting previous error styles
+                nameInput.classList.remove('error');
+                emailInput.classList.remove('error');
+                messageInput.classList.remove('error');
+
+                // Checking name field
+                if (nameInput.value.trim() === '') {
+                    nameInput.classList.add('error');
+                    isValid = false;
+                }
+
+                // Checking email field
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value.trim())) {
+                    emailInput.classList.add('error');
+                    isValid = false;
+                }
+
+                // Checking message field
+                if (messageInput.value.trim() === '') {
+                    messageInput.classList.add('error');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+        });
+    </script>
+</body>
+</html>
